@@ -3,6 +3,7 @@ package com.construction.puzzle.controllers;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -27,11 +28,10 @@ public class PuzzleController {
      * @throws IllegalArgumentException if the request path does not contain a valid puzzle ID
      */
     private String parsePuzzleIdFromRequestPath(String requestPath) {
-        String[] pathParts = requestPath.split("/");
-        if (pathParts.length != 4 || !pathParts[1].equals("puzzle") || (!pathParts[2].equals("unsolved") && !pathParts[2].equals("solved"))) {
+        if (requestPath.length() >= 3 || !StringUtils.isNumeric(requestPath)) {
             throw new IllegalArgumentException("Invalid request path: " + requestPath);
         }
-        return pathParts[3];
+        return requestPath;
     }
 
     /**
