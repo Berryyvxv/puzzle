@@ -1,0 +1,103 @@
+<!-- Client- Side/ Front end -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(to bottom right, #4B0082, #000000);
+            background-attachment: fixed;
+            overflow: hidden;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+    
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+    
+        button {
+            background-color: #F8F8FF;
+            border: none;
+            color: #4B0082;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+    
+        .button-icon {
+            margin-right: 10px;
+        }
+        
+        #button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        #imageContainer {
+            width: 300px;
+            height: 250px;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to the Puzzle game</h1>
+    <p>Let's play & pick one:</p>
+    <div id="button-container">
+        <button type="button" onclick="showUnsolved()">
+            <i class="fas fa-puzzle-piece button-icon"></i>
+            Unsolved Puzzle
+        </button>
+        <button type="button" onclick="showSolved()">
+            <i class="fas fa-check button-icon"></i>
+            Solved Puzzle
+        </button>
+    </div>
+    <div id="imageContainer"></div>
+
+    <script>
+        /**
+         * Displays the unsolved puzzle image.
+         * @param {string} imagePath - The path to the unsolved puzzle image.
+         * @throws {Error} If there is an error displaying the image.
+         * @returns {void}
+         */
+        function showUnsolved(imagePath) {
+            // imagePath parameter is not used in this function, but it's included for documentation purposes
+            document.getElementById("imageContainer").innerHTML = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+        }
+
+        /**
+         * Displays the solved puzzle image.
+         * @param {string} imagePath - The path to the solved puzzle image.
+         * @throws {Error} If there is an error displaying the image.
+         * @returns {void}
+         */
+        function showSolved(imagePath) {
+            // imagePath parameter is not used in this function, but it's included for documentation purposes
+            document.getElementById("imageContainer").innerHTML = '<img src="Inkie answer.png" alt="Solved Puzzle Image" width="300" height="250">';
+        }
+    </script>
+</body>
+</html>
