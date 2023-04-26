@@ -1,3 +1,4 @@
+
 <!-- Client- Side/ Front end -->
 <!DOCTYPE html>
 <html>
@@ -59,7 +60,6 @@
             overflow: hidden;
         }
     </style>
-    
 </head>
 <body>
     <h1>Welcome to the Puzzle game</h1>
@@ -98,6 +98,45 @@
             // imagePath parameter is not used in this function, but it's included for documentation purposes
             document.getElementById("imageContainer").innerHTML = '<img src="Inkie answer.png" alt="Solved Puzzle Image" width="300" height="250">';
         }
+        
+        // Test Suite for Partition Coverage
+        describe("Partition Coverage", function() {
+            it("should display unsolved puzzle image when unsolved button is clicked", function() {
+                // Arrange
+                const expectedImage = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+
+                // Act
+                showUnsolved();
+
+                // Assert
+                expect(document.getElementById("imageContainer").innerHTML).toBe(expectedImage);
+            });
+
+            it("should display solved puzzle image when solved button is clicked", function() {
+                // Arrange
+                const expectedImage = '<img src="Inkie answer.png" alt="Solved Puzzle Image" width="300" height="250">';
+
+                // Act
+                showSolved();
+
+                // Assert
+                expect(document.getElementById("imageContainer").innerHTML).toBe(expectedImage);
+            });
+        });
+
+        // Test Suite for Subdomain Coverage
+        describe("Subdomain Coverage", function() {
+            it("should display unsolved puzzle image when unsolved button is clicked", function() {
+                // Arrange
+                const expectedImage = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+
+                // Act
+                showUnsolved();
+
+                // Assert
+                expect(document.getElementById("imageContainer").innerHTML).toBe(expectedImage);
+            });
+        });
     </script>
 </body>
 </html>
