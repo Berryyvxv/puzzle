@@ -85,7 +85,7 @@
          */
         function showUnsolved(imagePath) {
             // imagePath parameter is not used in this function, but it's included for documentation purposes
-            document.getElementById("imageContainer").innerHTML = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+            document.getElementById("imageContainer").innerHTML = '<img src="inkie_1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
         }
 
         /**
@@ -96,14 +96,14 @@
          */
         function showSolved(imagePath) {
             // imagePath parameter is not used in this function, but it's included for documentation purposes
-            document.getElementById("imageContainer").innerHTML = '<img src="Inkie answer.png" alt="Solved Puzzle Image" width="300" height="250">';
+            document.getElementById("imageContainer").innerHTML = '<img src="inkie_1_answer.png" alt="Solved Puzzle Image" width="300" height="250">';
         }
         
         // Test Suite for Partition Coverage
         describe("Partition Coverage", function() {
             it("should display unsolved puzzle image when unsolved button is clicked", function() {
                 // Arrange
-                const expectedImage = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+                const expectedImage = '<img src="inkie_1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
 
                 // Act
                 showUnsolved();
@@ -114,7 +114,7 @@
 
             it("should display solved puzzle image when solved button is clicked", function() {
                 // Arrange
-                const expectedImage = '<img src="Inkie answer.png" alt="Solved Puzzle Image" width="300" height="250">';
+                const expectedImage = '<img src="inkie_1_answer.png" alt="Solved Puzzle Image" width="300" height="250">';
 
                 // Act
                 showSolved();
@@ -128,7 +128,7 @@
         describe("Subdomain Coverage", function() {
             it("should display unsolved puzzle image when unsolved button is clicked", function() {
                 // Arrange
-                const expectedImage = '<img src="inkie 1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
+                const expectedImage = '<img src="inkie_1.png" alt="Unsolved Puzzle Image" width="300" height="250">';
 
                 // Act
                 showUnsolved();
